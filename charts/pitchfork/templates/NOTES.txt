@@ -1,0 +1,6 @@
+{{- if contains "ClusterIP" .Values.service.type }}
+  Get the application URL by running these commands:
+  export POD_NAME=$(kubectl get pods --namespace {{ .Release.Namespace }} -l "app.kubernetes.io/name={{ include "pitchfork.name" . }},app.kubernetes.io/instance={{ .Release.Name }}" -o jsonpath="{.items[0].metadata.name}")
+  kubectl --namespace {{ .Release.Namespace }} port-forward $POD_NAME 8080:{{ .Values.service.healthCheckPort }}
+  echo "Visit http://127.0.0.1:8080/health to see your application health"
+{{- end }}

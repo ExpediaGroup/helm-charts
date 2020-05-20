@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "pitchfork.fullname" . }}
+  labels:
+    {{- include "pitchfork.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.port }}
+      protocol: TCP
+      name: app-port
+    - port: {{ .Values.service.healthCheckPort }}
+      targetPort: {{ .Values.service.healthCheckPort }}
+      protocol: TCP
+      name: healthcheck-port
+  selector:
+    {{- include "pitchfork.selectorLabels" . | nindent 4 }}
