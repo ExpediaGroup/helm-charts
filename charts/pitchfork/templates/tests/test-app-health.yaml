@@ -9,7 +9,7 @@ spec:
     spec:
       containers:
         - name: test-runner
-          image: yauritux/busybox-curl:latest
+          image: curlimages/curl:latest
           env:
             - name: PITCHFORK_HOST
               value: "{{ .Values.nameOverride }}.{{ .Release.Namespace }}"
@@ -17,6 +17,6 @@ spec:
               value: {{ .Values.service.healthCheckPort | quote }}
             - name: HEALTHCHECK_PATH
               value: {{ .Values.service.readinessProbe.httpGet.path | quote }}
-          command: ["sh", "-c", "curl -vk --max-time 1 http://$PITCHFORK_HOST:$PITCHFORK_PORT$HEALTHCHECK_PATH"]
+          command: ["sh", "-c", "curl -vk --connect-timeout 10 --retry 10 --retry-delay 10 --retry-connrefused http://$PITCHFORK_HOST:$PITCHFORK_PORT$HEALTHCHECK_PATH"]
       restartPolicy: "Never"
-  backoffLimit: 1
+  backoffLimit: 0
