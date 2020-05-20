@@ -24,7 +24,7 @@ podSecurityContext: {}
 securityContext: {}
 
 service:
-  name: app-port
+  name: pitchfork-service
   type: ClusterIP
   port: 9411
   healthCheckPort: 8081

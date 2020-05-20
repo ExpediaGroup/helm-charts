@@ -10,6 +10,10 @@ spec:
     - port: {{ .Values.service.port }}
       targetPort: {{ .Values.service.port }}
       protocol: TCP
-      name: {{ .Values.service.name }}
+      name: app-port
+    - port: {{ .Values.service.healthCheckPort }}
+      targetPort: {{ .Values.service.healthCheckPort }}
+      protocol: TCP
+      name: healthcheck-port
   selector:
     {{- include "pitchfork.selectorLabels" . | nindent 4 }}
