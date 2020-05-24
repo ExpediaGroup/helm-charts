@@ -2,20 +2,22 @@ apiVersion: v1
 entries:
   pitchfork:
   - apiVersion: v1
-    appVersion: 1.16.0
-    created: "2020-05-23T12:21:16.279915+01:00"
+    appVersion: 1.21.0
+    created: "2020-05-24T09:45:19.838994+01:00"
     description: Pitchfork lifts Zipkin tracing data into Haystack.
-    digest: a455fc9f8a5513308ec2ba180a3ac74aef6a08a1bab87856bcdba1078883854f
-    home: https://expediagroup.github.io/pitchfork/
+    digest: 70ba40bcd2e4e491b53455ceacd325847d852fbad8f2e1b55fec68b9933088ec
     name: pitchfork
     keywords:
-      - observability
-      - tracing
-      - zipkin
-      - haystack
+    - observability
+    - tracing
+    - zipkin
+    - haystack
+    maintainers:
+    - email: dmartinsalbuqu@expediagroup.com
+      name: worldtiki
     sources:
-      - https://github.com/ExpediaGroup/pitchfork
+    - https://github.com/ExpediaGroup/pitchfork
     urls:
     - pitchfork-0.1.0.tgz
     version: 0.1.0
-generated: "2020-05-23T12:21:16.279071+01:00"
+generated: "2020-05-24T09:45:19.838312+01:00"
