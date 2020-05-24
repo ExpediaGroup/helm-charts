@@ -12,6 +12,9 @@ entries:
     - tracing
     - zipkin
     - haystack
+    maintainers:
+    - email: dmartinsalbuqu@expediagroup.com
+      name: dmartinsalbuqu
     sources:
     - https://github.com/ExpediaGroup/pitchfork
     urls:
