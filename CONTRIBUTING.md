@@ -1,15 +1,20 @@
 # Contributing new Helm Charts
 
-If you would like to contribute a new Expedia Group Helm chart:
- * fork this GitHub repository and create a branch
- * create a a folder for your chart under `charts` and add the relevant YAML, template and related files (refer to an existing chart for reference)
-* submit a Pull Request with these changes
+Note: Unfortunately the process to publish new Helm Charts is not automated yet, so please bear with us while we explain this two step process 🦄
 
-## Release process
-Unfortunately this process is not automated yet, so please bear with us 🦄
+If you would like to contribute a new Expedia Group Helm chart you will need to open 2 pull requests.
 
-1. Start by adding the new chart with the sources to the `charts` directory in the `master` branch.
+## Publish Sources
 
-2. Next, package your new chart (you can use `helm package .`) and add it to the `gh-pages` branch.
+* Start by forking this Github repository and creating a new branch from master.
+* If this is a new application, create a new folder under `charts`.
+* Add the relevant Yaml files (refer to an existing chart for reference).
+* Submit a Pull Request with these changes.
 
-3. Finally, you will need to update the index file (you can use `helm repo index .`)
+## Publish Helm Charts
+
+* Switch to the `gh-pages` and create a new branch in your fork.
+* Package your chart into a `.tgz` file. See [helm package](https://helm.sh/docs/helm/helm_package/).
+* Add your file under the `repo` folder.
+* Finally, you will need to update the index file. See [helm repo index](https://helm.sh/docs/helm/helm_repo_index/). 
+* Submit a Pull Request with these changes.
