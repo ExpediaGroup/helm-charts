@@ -1,6 +1,9 @@
 # Contributing new Helm Charts
 
-If you would like to contribute with a new Expedia Group helm chart, fork this GitHub repository, create a branch, and send a Pull Request.
+If you would like to contribute a new Expedia Group Helm chart:
+ * fork this GitHub repository and create a branch
+ * create a a folder for your chart under `charts` and add the relevant YAML, template and related files (refer to an existing chart for reference)
+* submit a Pull Request with these changes
 
 ## Release process
 Unfortunately this process is not automated yet, so please bear with us 🦄
