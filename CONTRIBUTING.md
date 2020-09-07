@@ -16,5 +16,5 @@ If you would like to contribute a new Expedia Group Helm chart you will need to 
 * Switch to the `gh-pages` branch and create a new branch from this in your fork.
 * Package your chart into a `.tgz` file. See [Helm Package](https://helm.sh/docs/helm/helm_package/).
 * Add your file under the `repo` folder.
-* Finally, you will need to update the index file. See [helm repo index](https://helm.sh/docs/helm/helm_repo_index/). 
+* Finally, you will need to update the index file. See [Helm Repo Index](https://helm.sh/docs/helm/helm_repo_index/). 
 * Submit a Pull Request with these changes.
