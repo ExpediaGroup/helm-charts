@@ -6,7 +6,7 @@ If you would like to contribute a new Expedia Group Helm chart you will need to 
 
 ## Publish Sources
 
-* Start by forking this Github repository and creating a new branch from master.
+* Start by forking this Github repository and creating a new branch from main.
 * If this is a new application, create a new folder under `charts`.
 * Add the relevant Yaml files (refer to an existing chart for reference).
 * Submit a Pull Request with these changes.
