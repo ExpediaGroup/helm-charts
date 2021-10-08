@@ -24,7 +24,7 @@ jobs:
         with:
           version: v3.4.0
 
-      - name: Run chart-releaser for pitchfork
+      - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.2.1
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
