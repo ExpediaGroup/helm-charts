@@ -26,7 +26,5 @@ jobs:
 
       - name: Run chart-releaser for pitchfork
         uses: helm/chart-releaser-action@v1.2.1
-        with:
-          charts_dir: charts/pitchfork
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
