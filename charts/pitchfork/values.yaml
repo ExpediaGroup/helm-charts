@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: expediagroup/pitchfork
   pullPolicy: Always
-  tag: "1.29"
+  tag: "1.30"
 
 imagePullSecrets: []
 nameOverride: "pitchfork"
